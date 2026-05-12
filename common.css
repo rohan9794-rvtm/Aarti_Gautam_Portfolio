@@ -1,0 +1,413 @@
+/* ========== COMMON STYLES FOR ALL PAGES ========== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  
+  /* ===== PERFECT PROFESSIONAL COLOR COMBINATION ===== */
+  /* Elegant gradient: Deep Purple → Royal Blue → Teal → Coral → Rose */
+  background: linear-gradient(135deg, 
+  
+    #0f0c29 0%,
+    #1a0933 15%,
+    #302b63 30%,
+    #24243e 45%,
+    #1a1a2e 60%,
+    #16213e 75%,
+    #0f3460 90%,
+    #1a1a2e 100%
+    
+  );
+  background-size: 300% 300%;
+  animation: galaxyFlow 15s ease infinite;
+}
+
+@keyframes galaxyFlow {
+  0% { background-position: 0% 0%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+/* ===== ENHANCED FLOATING BLOBS ===== */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: 
+    radial-gradient(circle at 15% 20%, rgba(235, 100, 120, 0.35) 0%, transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(100, 150, 235, 0.35) 0%, transparent 45%),
+    radial-gradient(circle at 45% 45%, rgba(245, 180, 80, 0.35) 0%, transparent 50%),
+    radial-gradient(circle at 75% 25%, rgba(80, 200, 160, 0.3) 0%, transparent 45%),
+    radial-gradient(circle at 25% 85%, rgba(200, 100, 200, 0.3) 0%, transparent 45%),
+    radial-gradient(circle at 55% 65%, rgba(255, 140, 100, 0.25) 0%, transparent 50%);
+  animation: floatBlobs 20s ease-in-out infinite alternate;
+}
+
+@keyframes floatBlobs {
+  0% { 
+    transform: translate(0, 0) scale(1);
+    filter: blur(0px);
+  }
+  33% { 
+    transform: translate(25px, -15px) scale(1.04);
+  }
+  66% { 
+    transform: translate(-15px, 20px) scale(1.02);
+  }
+  100% { 
+    transform: translate(10px, -10px) scale(1.05);
+    filter: blur(2px);
+  }
+}
+
+/* ===== ENHANCED GRID OVERLAY (Softer) ===== */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0px, rgba(255, 255, 255, 0.03) 2px, transparent 2px, transparent 20px);
+  background-size: 55px 55px, 55px 55px, auto;
+  animation: gridFade 8s ease-in-out infinite alternate;
+}
+
+@keyframes gridFade {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* ===== SUBTLE NOISE TEXTURE ===== */
+body {
+  background-attachment: fixed;
+}
+
+/* Content z-index */
+nav, main, footer {
+  position: relative;
+  z-index: 10;
+}
+
+/* ===== ELEGANT CUSTOM CURSOR ===== */
+.cursor-follower {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 245, 220, 0.9);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: normal;
+  transition: transform 0.1s ease;
+  box-shadow: 0 0 20px rgba(255, 200, 150, 0.8);
+  animation: cursorPulse 2s ease-in-out infinite;
+}
+
+@keyframes cursorPulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% { 
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+/* ===== PREMIUM GLASS NAVIGATION ===== */
+.glass-nav {
+  position: sticky;
+  top: 20px;
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto 40px auto;
+  padding: 15px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-radius: 80px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.glass-nav:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ===== LOGO - ELEGANT GRADIENT ===== */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #FFFFFF, #FFD6A5, #F4A261, #E87A5D);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: logoShine 4s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes logoShine {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.logo span {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  background: none;
+  -webkit-background-clip: unset;
+}
+
+/* ===== NAVIGATION BUTTONS ===== */
+.nav-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.3px;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.nav-btn.active {
+  background: linear-gradient(135deg, #E87A5D, #C44E6F);
+  border-color: white;
+  box-shadow: 0 0 20px rgba(232, 122, 93, 0.5);
+}
+
+/* ===== FOOTER - ELEGANT ===== */
+.creative-footer {
+  background: rgba(25, 20, 30, 0.85);
+  backdrop-filter: blur(15px);
+  text-align: center;
+  padding: 45px 20px;
+  margin-top: 70px;
+  border-radius: 50px 50px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.social-icons a {
+  color: rgba(255, 235, 210, 0.85);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #F4A261;
+  transform: translateY(-5px) scale(1.1);
+}
+
+.creative-footer p {
+  color: rgba(255, 235, 210, 0.6);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+/* ===== TOAST NOTIFICATION ===== */
+.toast-notification {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(25, 20, 30, 0.95);
+  backdrop-filter: blur(15px);
+  color: #F4A261;
+  padding: 14px 32px;
+  border-radius: 60px;
+  font-weight: 600;
+  z-index: 10000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.4s ease;
+  border: 1px solid rgba(244, 162, 97, 0.3);
+  font-size: 0.9rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* ===== SCROLLBAR CUSTOMIZATION ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #E87A5D, #C44E6F);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #F4A261, #E87A5D);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .glass-nav {
+    flex-direction: column;
+    border-radius: 45px;
+    padding: 18px 25px;
+    top: 15px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  .nav-btn {
+    padding: 8px 18px;
+    font-size: 0.8rem;
+  }
+  
+  .social-icons {
+    gap: 20px;
+  }
+  
+  .social-icons a {
+    font-size: 1.3rem;
+  }
+  
+  .cursor-follower {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-nav {
+    width: 95%;
+    border-radius: 35px;
+  }
+  
+  .nav-links {
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .nav-btn {
+    padding: 6px 14px;
+    font-size: 0.7rem;
+  }
+}
+
+/* ========== FIX FOR STICKY NAVIGATION OVERLAP ========== */
+
+/* Add proper top margin to all main content areas */
+main {
+  padding-top: 20px;
+}
+
+/* Ensure the nav has proper z-index but doesn't cover content */
+.glass-nav {
+  z-index: 100;
+  position: sticky;
+  top: 20px;
+}
+
+/* Add scroll margin to all sections that might get covered */
+.cinematic-banner,
+.projects-banner,
+.about-banner,
+.contact-banner,
+.hero-designer,
+.stats-section,
+.featured-section,
+.projects-header,
+.about-container,
+.contact-header,
+.contact-container,
+.projects-grid,
+.experience-section,
+.map-section,
+.form-wrapper {
+  scroll-margin-top: 120px;
+}
+
+/* Create space between nav and first content */
+.glass-nav + *,
+.glass-nav + main,
+.glass-nav + .cinematic-banner,
+.glass-nav + .projects-banner,
+.glass-nav + .about-banner,
+.glass-nav + .contact-banner {
+  margin-top: 20px;
+}
+
+/* Fix for when nav is followed by a div wrapper */
+nav:first-of-type + * {
+  padding-top: 10px;
+}
+
+/* Reduce nav padding on mobile for better space usage */
+@media (max-width: 768px) {
+  .glass-nav {
+    position: sticky;
+    top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  main {
+    padding-top: 10px;
+  }
+}

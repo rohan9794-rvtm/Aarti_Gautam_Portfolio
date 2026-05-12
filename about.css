@@ -1,0 +1,1017 @@
+/* ========== ABOUT PAGE SPECIFIC STYLES ========== */
+
+/* ========== ABOUT PAGE - HOLOGRAPHIC PREMIUM ANIMATION ========== */
+
+/* Change from 70vh to 35vh - much narrower */
+/* ========== UNIQUE ABOUT PAGE BANNER ========== */
+
+.about-banner {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  min-height: 400px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+#aboutCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.about-banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 20;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.about-icon {
+  margin-bottom: 20px;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+.about-icon i {
+  font-size: 3rem;
+  color: #FFD6A5;
+  text-shadow: 0 0 20px rgba(255, 214, 165, 0.5);
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.about-badge {
+  display: inline-block;
+  margin-bottom: 20px;
+  animation: fadeInDown 0.6s ease;
+}
+
+.about-badge span {
+  display: inline-block;
+  padding: 6px 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 50px;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.about-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  animation: fadeInUp 0.6s ease 0.2s backwards;
+}
+
+.about-title span {
+  display: inline-block;
+  margin: 0 10px;
+  background: linear-gradient(135deg, #FFFFFF, #FFD6A5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.6s ease 0.4s backwards;
+}
+
+.about-quote i {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.about-quote p {
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 1px;
+  max-width: 400px;
+}
+
+.about-years {
+  animation: fadeInUp 0.6s ease 0.6s backwards;
+}
+
+.year-circle {
+  display: inline-block;
+  text-align: center;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.year-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #FFD6A5, #FF6B6B);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.year-label {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-banner {
+    height: 45vh;
+    min-height: 350px;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+  }
+  
+  .about-title span {
+    margin: 0 5px;
+  }
+  
+  .about-quote p {
+    font-size: 0.8rem;
+    max-width: 250px;
+  }
+  
+  .about-quote i {
+    font-size: 0.8rem;
+  }
+  
+  .year-number {
+    font-size: 1.5rem;
+  }
+  
+  .about-icon i {
+    font-size: 2rem;
+  }
+}
+
+/* Rest of your about.css remains the same */
+
+.holographic-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 60px;
+  padding: 40px 60px;
+  display: inline-block;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: cardFloat 4s ease-in-out infinite;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes cardFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.glow-ring {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 62px;
+  background: linear-gradient(45deg, #ff0066, #ffcc00, #ff0066);
+  background-size: 200% 200%;
+  z-index: -1;
+  animation: borderGlow 3s ease infinite;
+  filter: blur(8px);
+  opacity: 0.6;
+}
+
+@keyframes borderGlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.holographic-card i {
+  font-size: 3rem;
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.holographic-card h2 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.holographic-card p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.exp-years {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.years-num {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffcc00;
+  animation: numberPulse 1.5s ease infinite;
+}
+
+@keyframes numberPulse {
+  0%, 100% { text-shadow: 0 0 0 rgba(255, 204, 0, 0); }
+  50% { text-shadow: 0 0 20px rgba(255, 204, 0, 0.8); }
+}
+
+.years-text {
+  font-size: 0.8rem;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.quote-rotator {
+  margin-top: 40px;
+  font-style: italic;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  display: inline-block;
+  animation: quoteFade 4s ease infinite;
+}
+
+@keyframes quoteFade {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.sparkle-line {
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffcc00, #ff0066, #ffcc00, transparent);
+  margin: 30px auto 0;
+  animation: sparkleMove 2s linear infinite;
+  background-size: 200% 100%;
+}
+
+@keyframes sparkleMove {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+
+
+
+
+
+/* ========== ABOUT PAGE SPECIFIC STYLES ========== */
+
+/* ========== ABOUT PAGE - HOLOGRAPHIC PREMIUM ANIMATION ========== */
+
+/* Change from 70vh to 35vh - much narrower */
+/* ========== UNIQUE ABOUT PAGE BANNER ========== */
+
+.about-banner {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  min-height: 400px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+#aboutCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.about-banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 20;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.about-icon {
+  margin-bottom: 20px;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+.about-icon i {
+  font-size: 3rem;
+  color: #FFD6A5;
+  text-shadow: 0 0 20px rgba(255, 214, 165, 0.5);
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.about-badge {
+  display: inline-block;
+  margin-bottom: 20px;
+  animation: fadeInDown 0.6s ease;
+}
+
+.about-badge span {
+  display: inline-block;
+  padding: 6px 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 50px;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.about-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  animation: fadeInUp 0.6s ease 0.2s backwards;
+}
+
+.about-title span {
+  display: inline-block;
+  margin: 0 10px;
+  background: linear-gradient(135deg, #FFFFFF, #FFD6A5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.6s ease 0.4s backwards;
+}
+
+.about-quote i {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.about-quote p {
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 1px;
+  max-width: 400px;
+}
+
+.about-years {
+  animation: fadeInUp 0.6s ease 0.6s backwards;
+}
+
+.year-circle {
+  display: inline-block;
+  text-align: center;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.year-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #FFD6A5, #FF6B6B);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.year-label {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-banner {
+    height: 45vh;
+    min-height: 350px;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+  }
+  
+  .about-title span {
+    margin: 0 5px;
+  }
+  
+  .about-quote p {
+    font-size: 0.8rem;
+    max-width: 250px;
+  }
+  
+  .about-quote i {
+    font-size: 0.8rem;
+  }
+  
+  .year-number {
+    font-size: 1.5rem;
+  }
+  
+  .about-icon i {
+    font-size: 2rem;
+  }
+}
+
+/* Rest of your about.css remains the same */
+
+.holographic-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 60px;
+  padding: 40px 60px;
+  display: inline-block;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: cardFloat 4s ease-in-out infinite;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes cardFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.glow-ring {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 62px;
+  background: linear-gradient(45deg, #ff0066, #ffcc00, #ff0066);
+  background-size: 200% 200%;
+  z-index: -1;
+  animation: borderGlow 3s ease infinite;
+  filter: blur(8px);
+  opacity: 0.6;
+}
+
+@keyframes borderGlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.holographic-card i {
+  font-size: 3rem;
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.holographic-card h2 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.holographic-card p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.exp-years {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.years-num {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffcc00;
+  animation: numberPulse 1.5s ease infinite;
+}
+
+@keyframes numberPulse {
+  0%, 100% { text-shadow: 0 0 0 rgba(255, 204, 0, 0); }
+  50% { text-shadow: 0 0 20px rgba(255, 204, 0, 0.8); }
+}
+
+.years-text {
+  font-size: 0.8rem;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.quote-rotator {
+  margin-top: 40px;
+  font-style: italic;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  display: inline-block;
+  animation: quoteFade 4s ease infinite;
+}
+
+@keyframes quoteFade {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.sparkle-line {
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffcc00, #ff0066, #ffcc00, transparent);
+  margin: 30px auto 0;
+  animation: sparkleMove 2s linear infinite;
+  background-size: 200% 100%;
+}
+
+@keyframes sparkleMove {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+
+
+
+
+
+.about-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.avatar-frame {
+  background: linear-gradient(145deg, rgba(255, 230, 200, 0.3), rgba(255, 200, 150, 0.2));
+  border-radius: 50%;
+  padding: 12px;
+  border: 2px solid #ffcc00;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.avatar-frame img {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  transition: all 0.4s ease;
+}
+
+/* SIMPLE HOVER EFFECTS - These will definitely work */
+.avatar-frame:hover {
+  border-color: #ff0066;
+  box-shadow: 0 0 20px #ffcc00;
+  transform: scale(1.03);
+}
+
+.avatar-frame:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+@keyframes floatShape {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-15px) rotate(2deg); }
+}
+
+.about-content {
+  flex: 1.5;
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff, #ffd6a5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-content h2 {
+  font-size: 1.8rem;
+  color: white;
+  margin: 15px 0 20px;
+}
+
+.about-content p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.skills-section {
+  margin: 35px 0;
+}
+
+.skills-section h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #ff0066, #ff6600);
+  padding: 8px 22px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 0, 102, 0.4);
+}
+
+.signature {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2rem;
+  color: #ff6600;
+  margin-top: 25px;
+  text-align: right;
+}
+
+/* Experience Section */
+.experience-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 30px 60px;
+  text-align: center;
+}
+
+.experience-section h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff, #ffd6a5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(135deg, #ff0066, #ff6600);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 30px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff0066, #ff6600);
+  border: 2px solid white;
+}
+
+.timeline-year {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffcc00;
+  margin-bottom: 8px;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+
+.timeline-content h3 {
+  color: white;
+  margin-bottom: 8px;
+}
+
+.timeline-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-content h1 {
+    font-size: 2rem;
+  }
+  
+  .about-content h2 {
+    font-size: 1.3rem;
+  }
+  
+  .signature {
+    text-align: center;
+  }
+  
+  .experience-section h2 {
+    font-size: 1.6rem;
+  }
+  
+  .timeline {
+    padding-left: 20px;
+  }
+  
+  .timeline-item {
+    padding-left: 20px;
+  }
+}
+
+.about-content {
+  flex: 1.5;
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff, #ffd6a5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-content h2 {
+  font-size: 1.8rem;
+  color: white;
+  margin: 15px 0 20px;
+}
+
+.about-content p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.skills-section {
+  margin: 35px 0;
+}
+
+.skills-section h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #ff0066, #ff6600);
+  padding: 8px 22px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 0, 102, 0.4);
+}
+
+.signature {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2rem;
+  color: #ff6600;
+  margin-top: 25px;
+  text-align: right;
+}
+
+/* Experience Section */
+.experience-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 30px 60px;
+  text-align: center;
+}
+
+.experience-section h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff, #ffd6a5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(135deg, #ff0066, #ff6600);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 30px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff0066, #ff6600);
+  border: 2px solid white;
+}
+
+.timeline-year {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffcc00;
+  margin-bottom: 8px;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+
+.timeline-content h3 {
+  color: white;
+  margin-bottom: 8px;
+}
+
+.timeline-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-content h1 {
+    font-size: 2rem;
+  }
+  
+  .about-content h2 {
+    font-size: 1.3rem;
+  }
+  
+  .signature {
+    text-align: center;
+  }
+  
+  .experience-section h2 {
+    font-size: 1.6rem;
+  }
+  
+  .timeline {
+    padding-left: 20px;
+  }
+  
+  .timeline-item {
+    padding-left: 20px;
+  }
+}
