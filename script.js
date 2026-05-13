@@ -1327,6 +1327,7 @@ window.addEventListener('load', () => {
   
 // ========== PRINT MEDIA - POSTER ==========
 { title: "Poster1", category: "Print Media", type: "print", sub: "poster", img: "Print Media/Poster/poster1.jpeg", tags: ["poster", "education"], description: "Poster design " },
+{ title: "My Poster", category: "Print Media", type: "print", sub: "poster", img: "Print Media/Poster/me.png", tags: ["poster", "education"], description: "Poster design " },
 { title: "Poster2", category: "Print Media", type: "print", sub: "poster", img: "Print Media/Poster/poster2.jpeg", tags: ["poster", "creative"], description: "Creative poster design for BANGED ABROAD." },
 { title: "Poster3", category: "Print Media", type: "print", sub: "poster", img: "Print Media/Poster/poster3.jpeg", tags: ["poster", "coaching", "education"], description: "Poster design for Allen Coaching Guwahati." },
 { title: "Coaching Allen Poster Mockup", category: "Print Media", type: "print", sub: "poster", img: "Print Media/Poster/Coaching Allen Guwahati PosterMockup.png", tags: ["poster", "mockup"], description: "Poster mockup for Allen Coaching." },
